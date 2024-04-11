@@ -8,4 +8,14 @@ local map = vim.keymap.set
 -- map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
-map("n", "<C-W>", "<C-W>q")
+
+map("n", "<C-w>", "<C-w>q")
+map("n", "<leader>tt", function()
+  require("base46").toggle_transparency()
+end, { desc = "Toggle transparency" })
+map("i", "<C-f>", "copilot#Accept('<CR>')", {
+  noremap = true,
+  silent = true,
+  expr = true,
+  replace_keycodes = false,
+})
