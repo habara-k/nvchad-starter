@@ -22,7 +22,7 @@ for _, lsp in ipairs(servers) do
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
       if client.server_capabilities.inlayHintProvider then
-        vim.lsp.inlay_hint.enable(bufnr)
+        vim.lsp.inlay_hint.enable(true)
       end
     end,
     on_init = on_init,
