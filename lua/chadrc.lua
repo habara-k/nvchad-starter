@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-  theme = "onedark",
+  theme = "github_dark",
   transparency = false,
 
   -- hl_override = {
